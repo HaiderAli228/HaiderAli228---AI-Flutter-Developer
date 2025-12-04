@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
+import { Briefcase, Calendar, CheckCircle2, Globe } from 'lucide-react';
 import { SectionId } from '../types';
 
 const Experience: React.FC = () => {
@@ -18,19 +18,33 @@ const Experience: React.FC = () => {
         <div className="space-y-12">
           
           <WorkCard 
-            role="Flutter Developer"
-            company="The Web Concept (TWC)"
-            period="Aug 2025 - Present"
-            location="Faisalabad, PK"
-            description="At TWC, I serve as a core mobile developer responsible for the end-to-end lifecycle of high-performance mobile applications. My role involves architectural decision-making, API integration, and ensuring app scalability."
+            role="Freelance Flutter Developer"
+            company="Self-Employed / Global Clients"
+            period="Nov 2024 - Present"
+            location="Remote"
+            description="Currently operating as an independent consultant, delivering end-to-end mobile solutions for international clients. I handle the entire software lifecycle—from requirement gathering with clients to deployment on App Stores."
             responsibilities={[
-              "Developed responsive and scalable cross-platform apps using Flutter & Dart, ensuring consistent performance across both Android and iOS ecosystems.",
-              "Integrated Firebase services (Auth, Firestore, Cloud Functions) to create real-time, serverless backend solutions for client applications.",
-              "Collaborated with UI/UX designers to implement complex animations (Rive, Lottie) that increased user retention by 25%.",
-              "Implemented efficient State Management using Provider, optimizing memory usage and ensuring seamless data flow in large-scale apps.",
-              "Optimized API consumption using RESTful services, reducing data latency and improving app responsiveness in low-bandwidth environments."
+              "Successfully delivered 'K9P Finder', a complex pet tracking application with real-time GPS and BLE integration, as a fully managed client project.",
+              "Managing client communication, requirement analysis, and project timelines for multiple concurrent projects.",
+              "Implementing production-grade architectures (Clean Architecture + MVVM) for scalable client applications.",
+              "Providing post-launch support and maintenance, ensuring 99.9% app uptime for deployed solutions."
             ]}
-            techStack={["Flutter", "Dart", "Firebase", "REST APIs", "Provider", "Git", "Jira"]}
+            techStack={["Flutter", "Firebase", "Google Maps API", "BLE", "Client Management"]}
+          />
+
+          <WorkCard 
+            role="Flutter Developer Intern"
+            company="The Web Concept (TWC)"
+            period="Aug 2024 - Oct 2024"
+            location="Faisalabad, PK"
+            description="A focused internship where I refined my architectural skills and contributed to enterprise-level applications under senior mentorship."
+            responsibilities={[
+              "Collaborated on real-time projects, applying advanced state management techniques (Provider) to optimize app performance.",
+              "Integrated complex animations using Rive and Lottie to enhance user engagement metrics by 25%.",
+              "Worked with Firebase Cloud Functions to implement serverless backend logic, reducing infrastructure costs.",
+              "Participated in code reviews and architectural planning sessions, learning industry standards for code maintainability."
+            ]}
+            techStack={["Flutter", "Dart", "Firebase", "Rive Animations", "Provider"]}
           />
 
           <WorkCard 
@@ -38,13 +52,12 @@ const Experience: React.FC = () => {
             company="Techloset Solutions"
             period="Jul 2024 - Sep 2024"
             location="Faisalabad, PK"
-            description="During my internship at Techloset, I gained intensive hands-on experience in a fast-paced software house environment. I worked directly on production codebases and contributed to live client projects."
+            description="Gained intensive hands-on experience in a fast-paced software house environment, contributing to live production codebases."
             responsibilities={[
               "Transformed Figma designs into pixel-perfect, responsive Flutter code, ensuring 100% design fidelity.",
-              "Worked with local databases (SQLite & Hive) to implement offline-first functionality for apps used in remote areas.",
-              "Participated in Agile sprints, daily stand-ups, and code reviews, learning industry best practices for version control and code quality.",
-              "Assisted senior developers in debugging critical issues and refactoring legacy code for better maintainability.",
-              "Integrated Google Maps API for location-based services in a delivery management application."
+              "Implemented offline-first functionality using SQLite and Hive for apps deployed in low-connectivity areas.",
+              "Integrated Google Maps API for location-based services in a delivery management application.",
+              "Assisted in debugging critical issues and refactoring legacy code modules."
             ]}
             techStack={["Flutter", "Figma to Code", "SQLite", "Google Maps API", "Agile"]}
           />

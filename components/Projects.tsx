@@ -1,23 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Zap, Layers, Server, TrendingUp, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, Zap, Layers, Server, TrendingUp, ArrowRight, Briefcase } from 'lucide-react';
 import { SectionId, Project } from '../types';
 
 const projects: Project[] = [
   {
     title: "K9P Finder – Smart Pet Tracking",
-    description: "A complete pet safety ecosystem. This Flutter + Firebase app enables real-time GPS tracking, BLE-based scanning for nearby detection, and a community-driven alert system for missing pets, managed via a robust Admin Dashboard.",
-    tags: ["Flutter", "Firebase", "Google Maps", "BLE Scanning"],
+    description: "A complete commercial pet safety ecosystem delivered for a freelance client. This Flutter + Firebase app enables real-time GPS tracking, BLE-based scanning for nearby detection, and a community-driven alert system.",
+    tags: ["Freelance Project", "Flutter", "Firebase", "Google Maps", "BLE Scanning"],
     image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=1000&auto=format&fit=crop",
     github: "https://github.com/HaiderAli228/K9P-Finder",
-    stats: ["Real-time GPS", "BLE Radar", "Admin Panel"],
-    challenge: "Tracking pets in real-time requires high GPS accuracy and battery efficiency, while also needing a solution for indoor detection where GPS signals fail.",
+    stats: ["Commercial Client", "GPS + BLE Radar", "Admin Panel"],
+    challenge: "The client required a dual-tracking system (Outdoor GPS + Indoor Bluetooth) that could run efficiently in the background without draining user battery.",
     solution: "Implemented a hybrid tracking system using Google Maps for outdoor tracking and Bluetooth Low Energy (BLE) scanning for precise proximity detection within 100 meters."
   },
   {
     title: "NueraTalk - Gemini AI Chatbot",
     description: "An intelligent conversational agent powered by Google's Gemini 1.5 Flash model. Unlike standard chatbots, NueraTalk features persistent local history using SQLite, smart session grouping, and auto-cleanup mechanisms.",
-    tags: ["Flutter", "Gemini API", "SQLite", "DashChat"],
+    tags: ["Personal Project", "Gemini API", "SQLite", "DashChat"],
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop",
     github: "https://github.com/HaiderAli228",
     stats: ["Gemini 1.5 Flash", "Offline History", "Auto-Cleanup"],
@@ -27,7 +27,7 @@ const projects: Project[] = [
   {
     title: "JaggerySales - E-Commerce App",
     description: "A specialized B2C marketplace connecting buyers with jaggery products. Features secure OTP authentication, integrated payment gateways, and a service-oriented architecture using Hive for local caching.",
-    tags: ["Flutter", "Firebase", "Hive DB", "Payment Gateway"],
+    tags: ["Freelance Project", "Firebase", "Hive DB", "Payment Gateway"],
     image: "https://images.unsplash.com/photo-1627483262769-04d0a1401487?q=80&w=1000&auto=format&fit=crop",
     github: "https://github.com/HaiderAli228",
     stats: ["OTP Auth", "Service Pattern", "Cart System"],
@@ -37,7 +37,7 @@ const projects: Project[] = [
   {
     title: "AiNotebook - Privacy-First Notes",
     description: "A local-first Markdown editor prioritizing data privacy. Notes are stored in SQLite and can be exported as .doc files directly from the device without requiring internet access.",
-    tags: ["Flutter", "SQLite", "Markdown", "File I/O"],
+    tags: ["Open Source", "SQLite", "Markdown", "File I/O"],
     image: "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1000&auto=format&fit=crop",
     github: "https://github.com/HaiderAli228",
     stats: ["100% Offline", "Doc Export", "Markdown Render"],
@@ -47,7 +47,7 @@ const projects: Project[] = [
   {
     title: "SnapSense - AI Image Gen",
     description: "A Clean Architecture demonstration app that leverages Stable Diffusion APIs to generate high-quality art from text prompts. Built using the BLoC state management pattern for robust error handling.",
-    tags: ["Flutter", "Bloc Pattern", "Stable Diffusion", "Clean Arch"],
+    tags: ["R&D", "Bloc Pattern", "Stable Diffusion", "Clean Arch"],
     image: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=1000&auto=format&fit=crop",
     github: "https://github.com/HaiderAli228",
     stats: ["Bloc State", "Rest API", "Image Gen"],
@@ -106,7 +106,7 @@ const ProjectCaseStudy: React.FC<{ project: Project, index: number }> = ({ proje
            {/* Floating badges on image */}
            <div className="absolute bottom-6 left-6 flex flex-wrap gap-2">
              {project.tags.map(tag => (
-               <span key={tag} className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-xs text-white">
+               <span key={tag} className={`px-3 py-1 backdrop-blur-md border border-white/10 rounded-full text-xs text-white ${tag.includes('Freelance') ? 'bg-neon-purple/80 font-bold' : 'bg-black/60'}`}>
                  {tag}
                </span>
              ))}

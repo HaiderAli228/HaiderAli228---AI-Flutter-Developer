@@ -1,9 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Smartphone, Code2, BrainCircuit, Database, Cloud, Server, Globe, Cpu, Terminal, Layers } from 'lucide-react';
+import { Github, Linkedin, Mail, Smartphone, Code2, BrainCircuit, Server, Cpu, Terminal, Layers } from 'lucide-react';
 import { SectionId } from '../types';
 
 const Hero: React.FC = () => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id={SectionId.HERO} className="min-h-screen flex flex-col justify-center items-center relative px-4 pt-24 pb-12 overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 via-[#050511] to-[#050511]">
       
@@ -41,10 +49,10 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-5 mb-12">
-            <a href={`#${SectionId.PROJECTS}`} className="px-10 py-4 bg-gradient-to-r from-neon-blue to-blue-600 text-black font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all transform hover:-translate-y-1 hover:scale-105">
+            <a href={`#${SectionId.PROJECTS}`} onClick={(e) => scrollToSection(e, SectionId.PROJECTS)} className="px-10 py-4 bg-gradient-to-r from-neon-blue to-blue-600 text-black font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all transform hover:-translate-y-1 hover:scale-105">
               View Case Studies
             </a>
-            <a href={`#${SectionId.CONTACT}`} className="px-10 py-4 bg-transparent border-2 border-gray-600 hover:border-neon-purple text-white font-medium text-lg rounded-full hover:shadow-[0_0_20px_rgba(188,19,254,0.4)] transition-all transform hover:-translate-y-1">
+            <a href={`#${SectionId.CONTACT}`} onClick={(e) => scrollToSection(e, SectionId.CONTACT)} className="px-10 py-4 bg-transparent border-2 border-gray-600 hover:border-neon-purple text-white font-medium text-lg rounded-full hover:shadow-[0_0_20px_rgba(188,19,254,0.4)] transition-all transform hover:-translate-y-1">
               Contact Me
             </a>
           </div>

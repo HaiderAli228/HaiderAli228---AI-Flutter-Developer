@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Star, Award, Sparkles, Medal, Crown } from 'lucide-react';
+import { Trophy, Star, Sparkles, Medal } from 'lucide-react';
 import { SectionId } from '../types';
 
 const Achievements: React.FC = () => {
@@ -28,7 +28,7 @@ const Achievements: React.FC = () => {
              <p className="text-gray-300 leading-relaxed text-lg mb-4">
                Awarded the highly competitive, fully-funded <strong>PEEF Scholarship</strong> for my Bachelor's degree (BSCS). This prestigious scholarship is granted to students who demonstrate exceptional academic merit and consistency.
              </p>
-             <ul className="list-disc list-inside text-gray-400 space-y-2">
+             <ul className="list-disc list-inside text-gray-400 space-y-4 mb-6">
                <li>Recognized as a top-tier scholar in the province of Punjab.</li>
                <li>Maintained a GPA threshold above 3.5 throughout the degree to retain eligibility.</li>
                <li>Selected based on a rigorous evaluation of academic history and potential for future impact.</li>
