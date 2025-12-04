@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Smartphone, Code2, BrainCircuit, Server, Cpu, Terminal, Layers } from 'lucide-react';
+import { Github, Linkedin, Mail, Smartphone, Code2, BrainCircuit, Server, Cpu, Terminal, Layers, FileText } from 'lucide-react';
 import { SectionId } from '../types';
 
 const Hero: React.FC = () => {
@@ -52,8 +52,13 @@ const Hero: React.FC = () => {
             <a href={`#${SectionId.PROJECTS}`} onClick={(e) => scrollToSection(e, SectionId.PROJECTS)} className="px-10 py-4 bg-gradient-to-r from-neon-blue to-blue-600 text-black font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all transform hover:-translate-y-1 hover:scale-105">
               View Case Studies
             </a>
-            <a href={`#${SectionId.CONTACT}`} onClick={(e) => scrollToSection(e, SectionId.CONTACT)} className="px-10 py-4 bg-transparent border-2 border-gray-600 hover:border-neon-purple text-white font-medium text-lg rounded-full hover:shadow-[0_0_20px_rgba(188,19,254,0.4)] transition-all transform hover:-translate-y-1">
-              Contact Me
+            <a 
+              href="/cv.html" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-10 py-4 bg-transparent border-2 border-gray-600 hover:border-white text-white font-medium text-lg rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all transform hover:-translate-y-1 flex items-center gap-2"
+            >
+              <FileText size={20} /> Download / Print CV
             </a>
           </div>
 
