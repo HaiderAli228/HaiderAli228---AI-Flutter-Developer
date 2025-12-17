@@ -27,5 +27,6 @@ export enum SectionId {
   EXPERIENCE = 'experience',
   EDUCATION = 'education',
   GOALS = 'goals',
+  REFERENCES = 'references',
   CONTACT = 'contact'
 }

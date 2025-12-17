@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import FutureGoals from './components/FutureGoals';
+import References from './components/References';
 import Contact from './components/Contact';
 import { SectionId } from './types';
 
@@ -38,6 +39,7 @@ const App: React.FC = () => {
             <a href={`#${SectionId.EXPERIENCE}`} onClick={(e) => scrollToSection(e, SectionId.EXPERIENCE)} className="hover:text-white transition-colors">Experience</a>
             <a href={`#${SectionId.PROJECTS}`} onClick={(e) => scrollToSection(e, SectionId.PROJECTS)} className="hover:text-white transition-colors">Projects</a>
             <a href={`#${SectionId.GOALS}`} onClick={(e) => scrollToSection(e, SectionId.GOALS)} className="hover:text-neon-purple transition-colors">Goals</a>
+            <a href={`#${SectionId.REFERENCES}`} onClick={(e) => scrollToSection(e, SectionId.REFERENCES)} className="hover:text-white transition-colors">References</a>
             <a href={`#${SectionId.CONTACT}`} onClick={(e) => scrollToSection(e, SectionId.CONTACT)} className="hover:text-neon-blue transition-colors">Contact</a>
           </div>
         </div>
@@ -52,6 +54,7 @@ const App: React.FC = () => {
         <Skills />
         <Projects />
         <FutureGoals />
+        <References />
         <Contact />
       </main>
     </div>
